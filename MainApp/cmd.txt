@@ -6,3 +6,7 @@ Moc%27ing %(Filename).h...
 $(ProjectDir)moc\moc_%(Filename).cpp
 $(QTDIR)\bin\moc.exe;%(FullPath)
 
+Í¬²½µ½github
+git status && git add . && git commit -m "change" && git push
+
+
