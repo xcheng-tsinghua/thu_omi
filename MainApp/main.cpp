@@ -5,7 +5,7 @@
 #include "../External/fkernel/Include/FKernelUtilities.h"
 #include "FMainWindow.h"
 #include "MainView.h"
-#include "../ThuOMI-server/MainApp/GeneratedFiles/ui_MainWindow.h"
+#include "MainApp/GeneratedFiles/ui_MainWindow.h"
 
 FMainWindow*	gWindow;
 FMainView*		gView;

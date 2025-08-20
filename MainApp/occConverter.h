@@ -125,6 +125,10 @@ public:
 	// 将所有面设置成默认颜色
 	void setAllSurfColorDefault();
 
+	// 获取整个模型的 mesh
+	ON_Mesh* GetModelMesh();
+
+
 private:
 
 	void faceConvert(TColgp_SequenceOfPnt aPoints, Handle_Geom_Surface aSurf);
@@ -199,5 +203,9 @@ private:
 
 	Handle(XCAFDoc_ColorTool) m_pColorTool;
 	unordered_map<FSurface*, Quantity_Color> m_pFaceColorDefault;
+
+	ON_Mesh* mp_all_mesh;
+
+
 
 };

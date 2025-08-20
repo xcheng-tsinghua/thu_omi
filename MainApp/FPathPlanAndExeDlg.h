@@ -42,6 +42,7 @@ private slots:
 	void onPathPlan();
 	void onExport();
 	void onButtonClicked(QAbstractButton* button);
+	void onColliButtonClicked(QAbstractButton* button);
 	void onDataTransfer();
 
 protected:
@@ -59,8 +60,14 @@ protected:
 	QRadioButton* ShortType;
 	QRadioButton* FastType;
 
+	QButtonGroup* mp_colli_group;
+	QRadioButton* mp_colli_fast_btn;
+	QRadioButton* mp_colli_acc_btn;
+
 	FPathPlan* m_pPathPlan;
-	int IsShortestPathPlan;
+	bool m_is_fast_path_plan;
+
+	bool m_is_fast_colli_judge;
 
 	FMainDoc* m_pDoc;
 	QString m_NC_CodeBody;

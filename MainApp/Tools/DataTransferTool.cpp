@@ -2,8 +2,8 @@
 #include <Eigen\Dense>
 #include "../MainApp/MainDoc.h"
 #include "qinputdialog.h"
-#include "../ThuOMI-server/MainApp/FInsFeaTreeWnd.h"
-#include "../ThuOMI-server/MainApp/FAdjustMachine.h"
+#include "MainApp/FInsFeaTreeWnd.h"
+#include "MainApp/FAdjustMachine.h"
 #include "../MainApp/np.h"
 #include "../MainApp/MeasPt.h"
 

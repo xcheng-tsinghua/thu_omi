@@ -2100,7 +2100,7 @@ bool isSuffixXXX(string _filename, string _suffix)
 
 }
 
-bool isFaceIntLineseg(const TopoDS_Face& _face, const gp_Pnt& _startPnt, const gp_Pnt& _endPnt)
+bool isFaceIntLineseg(const TopoDS_Face& _face, const gp_Pnt& _startPnt, const gp_Pnt& _endPnt, const double& _min_dist)
 {
 	TopoDS_Edge edge = BRepBuilderAPI_MakeEdge(_startPnt, _endPnt);
 
@@ -2108,7 +2108,7 @@ bool isFaceIntLineseg(const TopoDS_Face& _face, const gp_Pnt& _startPnt, const g
 	BRepExtrema_DistShapeShape dist(_face, edge, Extrema_ExtFlag_MIN);
 
 	// 检查是否有交点，最近距离为零则有交点
-	if (dist.Value() < PRECISION) 
+	if (dist.Value() < PRECISION + _min_dist)
 	{
 		return true;
 
@@ -2120,7 +2120,7 @@ bool isFaceIntLineseg(const TopoDS_Face& _face, const gp_Pnt& _startPnt, const g
 
 }
 
-bool isIntersectToModel(const gp_Pnt& _startPnt, const gp_Pnt& _endPnt)
+bool isIntersectToModel(const gp_Pnt& _startPnt, const gp_Pnt& _endPnt, const double& _min_dist)
 {
 	//clock_t start = clock();
 
@@ -2128,7 +2128,7 @@ bool isIntersectToModel(const gp_Pnt& _startPnt, const gp_Pnt& _endPnt)
 
 	for (auto ita = stepFaceAll.begin(); ita != stepFaceAll.end(); ++ita)
 	{
-		if (isFaceIntLineseg(*ita, _startPnt, _endPnt))
+		if (isFaceIntLineseg(*ita, _startPnt, _endPnt, _min_dist))
 		{
 			return true;
 		}

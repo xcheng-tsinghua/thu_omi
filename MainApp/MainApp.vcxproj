@@ -658,7 +658,7 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath);.\images\surface\railsurextent1.png;.\images\surface\railsurextent2.png;.\images\surface\railsurextent3.png;.\images\surface\railsurextent4.png;.\images\surface\railsurextent5.png;.\images\surface\railsurextent6.png;.\images\surface\railsurextent7.png;.\images\surface\railsurextent8.png;.\i18n\jcp3_en.qm;.\i18n\jcp3_zh.qm;%(AdditionalInputs)</AdditionalInputs>
     </CustomBuild>
-    <None Include="MOC.txt" />
+    <None Include="cmd.txt" />
     <None Include="PathPlan\TSPSOLVER\LKH\SRC\Makefile" />
     <None Include="PathPlan\TSPSOLVER\LKH\SRC\参数说明.txt" />
     <CustomBuild Include="UI\MainWindow.ui">

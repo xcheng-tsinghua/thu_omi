@@ -923,7 +923,7 @@
       <Filter>Source Files\Resource Files</Filter>
     </None>
     <None Include="cpp.hint" />
-    <None Include="MOC.txt" />
+    <None Include="cmd.txt" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="UI\MainWindow.ui">

@@ -26,7 +26,8 @@ FPathPlanAndExeDlg::FPathPlanAndExeDlg(QWidget* parent)
 
 	// 初始化其它参数
 	m_pPathPlan = NULL;
-	IsShortestPathPlan = 1;
+	m_is_fast_path_plan = true;
+	m_is_fast_colli_judge = true;
 	m_pInspPathShow = new PathAllEntity;
 	gWindow->GetMainDoc()->AddDispEnt(m_pInspPathShow);
 
@@ -58,9 +59,6 @@ FPathPlanAndExeDlg::FPathPlanAndExeDlg(QWidget* parent)
 	label9->setText(QString::fromLocal8Bit("安全距离/mm"));
 	m_safe = new QLineEdit(this);
 	m_safe->setText(QString::number(10));
-
-	FastType = new QRadioButton(QString::fromLocal8Bit("最短"));
-	ShortType = new QRadioButton(QString::fromLocal8Bit("快速"));
 
 	QLabel* labelProbeOn = new QLabel(QString::fromLocal8Bit("测头开启指令"));
 	QLabel* labelProbeOff = new QLabel(QString::fromLocal8Bit("测头关闭指令"));
@@ -104,20 +102,38 @@ FPathPlanAndExeDlg::FPathPlanAndExeDlg(QWidget* parent)
 	QGroupBox* fifthGroup = new QGroupBox(QString::fromLocal8Bit("路径规划操作"));
 	QHBoxLayout* box3 = new QHBoxLayout(fifthGroup);
 
+	// 路径规划方式选择组
+	ShortType = new QRadioButton(QString::fromLocal8Bit("最短"));
+	FastType = new QRadioButton(QString::fromLocal8Bit("快速"));
+
 	m_pButtonGroup = new QButtonGroup;
 	QGroupBox* MTtype_Group = new QGroupBox(QString::fromLocal8Bit("路径规划方式"));
 	QHBoxLayout* MT_Layout = new QHBoxLayout();
-	m_pButtonGroup->addButton(FastType);
 	m_pButtonGroup->addButton(ShortType);
-	MT_Layout->addWidget(FastType);
+	m_pButtonGroup->addButton(FastType);
 	MT_Layout->addWidget(ShortType);
+	MT_Layout->addWidget(FastType);
 	MTtype_Group->setLayout(MT_Layout);
 	FastType->setChecked(true);
 
+	// 干涉检测方式选择组
+	mp_colli_acc_btn = new QRadioButton(QString::fromLocal8Bit("精确"));
+	mp_colli_fast_btn = new QRadioButton(QString::fromLocal8Bit("快速"));
+
+	mp_colli_group = new QButtonGroup;
+	QGroupBox* colli_type_Group = new QGroupBox(QString::fromLocal8Bit("干涉检测方式"));
+	QHBoxLayout* colli_layout = new QHBoxLayout();
+	mp_colli_group->addButton(mp_colli_acc_btn);
+	mp_colli_group->addButton(mp_colli_fast_btn);
+	colli_layout->addWidget(mp_colli_acc_btn);
+	colli_layout->addWidget(mp_colli_fast_btn);
+	colli_type_Group->setLayout(colli_layout);
+	mp_colli_fast_btn->setChecked(true);
+
 	box3->addWidget(m_onPathPlan);
 	box3->addWidget(m_pProgressBar);
-	//box3->addStretch(1);
 	box3->addWidget(MTtype_Group);
+	box3->addWidget(colli_type_Group);
 
 	QGroupBox* NC_CodeGroup = new QGroupBox(QString::fromLocal8Bit("NC代码设置"));
 	QVBoxLayout* NC_CodeGroupVLayout = new QVBoxLayout(NC_CodeGroup);
@@ -148,6 +164,7 @@ FPathPlanAndExeDlg::FPathPlanAndExeDlg(QWidget* parent)
 	connect(m_onExport, SIGNAL(clicked()), this, SLOT(onExport()));
 	connect(m_DataTransfer, SIGNAL(clicked()), this, SLOT(onDataTransfer()));
 	connect(m_pButtonGroup, SIGNAL(buttonClicked(QAbstractButton*)), this, SLOT(onButtonClicked(QAbstractButton*)));
+	connect(mp_colli_group, SIGNAL(buttonClicked(QAbstractButton*)), this, SLOT(onColliButtonClicked(QAbstractButton*)));
 
 }
 
@@ -187,7 +204,9 @@ void FPathPlanAndExeDlg::onPathPlan()
 		return;
 	}
 
-	m_pPathPlan->setPathPlanType(IsShortestPathPlan);
+	m_pPathPlan->SetIsFastPathPlan(m_is_fast_path_plan);
+	m_pPathPlan->SetIsFaseColliJudge(m_is_fast_colli_judge);
+	m_pPathPlan->SetProgress(m_pProgressBar);
 
 	m_pPathPlan->SetIpPntList(gWindow->GetMainDoc()->GetIpPntList());
 	FIntList orders;
@@ -242,11 +261,35 @@ void FPathPlanAndExeDlg::onButtonClicked(QAbstractButton* button)
 
 	if (button->text() == QString::fromLocal8Bit("最短"))
 	{
-		IsShortestPathPlan = 1;
+		m_is_fast_path_plan = false;
 	}
 	else if (button->text() == QString::fromLocal8Bit("快速"))
 	{
-		IsShortestPathPlan = 0;
+		m_is_fast_path_plan = true;
+	}
+	else
+	{
+		QMessageBox::warning(
+			QApplication::activeWindow(), QObject::tr("Caution"), QString::fromLocal8Bit("快速、最短路径规划方式设置错误，默认快速"));
+	}
+
+}
+
+void FPathPlanAndExeDlg::onColliButtonClicked(QAbstractButton* button)
+{
+	if (!m_pPathPlan)
+	{
+		m_pPathPlan = new FPathPlan(gWindow->GetMainDoc());
+
+	}
+
+	if (button->text() == QString::fromLocal8Bit("精确"))
+	{
+		m_is_fast_colli_judge = false;
+	}
+	else if (button->text() == QString::fromLocal8Bit("快速"))
+	{
+		m_is_fast_colli_judge = true;
 	}
 	else
 	{

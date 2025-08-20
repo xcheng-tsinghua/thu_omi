@@ -249,10 +249,10 @@ void SurfParaSpace(Handle(Geom_BSplineSurface) theSurf, double& uStart, double& 
 bool isSuffixXXX(string _filename, string _suffix = "txt");
 
 // 计算线段与面之间是否有交点
-bool isFaceIntLineseg(const TopoDS_Face& _face, const gp_Pnt& _startPnt, const gp_Pnt& _endPnt);
+bool isFaceIntLineseg(const TopoDS_Face& _face, const gp_Pnt& _startPnt, const gp_Pnt& _endPnt, const double& _min_dist);
 
 // 计算_startPnt到_endPnt的连线和打开的STEP模型是否相交
-bool isIntersectToModel(const gp_Pnt& _startPnt, const gp_Pnt& _endPnt);
+bool isIntersectToModel(const gp_Pnt& _startPnt, const gp_Pnt& _endPnt, const double& _min_dist);
 
 // 利用面的角点计算面的参数范围
 void faceBndUseVert(const TopoDS_Face& _F, Standard_Real& _UMin, Standard_Real& _UMax, Standard_Real& _VMin, Standard_Real& _VMax);

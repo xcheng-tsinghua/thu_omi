@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'FPathPlanAndExeDlg.h'
 **
-** Created: Tue Aug 19 21:24:11 2025
+** Created: Wed Aug 20 14:36:57 2025
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.3)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_FPathPlanAndExeDlg[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -35,7 +35,8 @@ static const uint qt_meta_data_FPathPlanAndExeDlg[] = {
       31,   19,   19,   19, 0x08,
       44,   19,   19,   19, 0x08,
       62,   55,   19,   19, 0x08,
-      96,   19,   19,   19, 0x08,
+      96,   55,   19,   19, 0x08,
+     135,   19,   19,   19, 0x08,
 
        0        // eod
 };
@@ -44,6 +45,7 @@ static const char qt_meta_stringdata_FPathPlanAndExeDlg[] = {
     "FPathPlanAndExeDlg\0\0onCancel()\0"
     "onPathPlan()\0onExport()\0button\0"
     "onButtonClicked(QAbstractButton*)\0"
+    "onColliButtonClicked(QAbstractButton*)\0"
     "onDataTransfer()\0"
 };
 
@@ -57,7 +59,8 @@ void FPathPlanAndExeDlg::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
         case 1: _t->onPathPlan(); break;
         case 2: _t->onExport(); break;
         case 3: _t->onButtonClicked((*reinterpret_cast< QAbstractButton*(*)>(_a[1]))); break;
-        case 4: _t->onDataTransfer(); break;
+        case 4: _t->onColliButtonClicked((*reinterpret_cast< QAbstractButton*(*)>(_a[1]))); break;
+        case 5: _t->onDataTransfer(); break;
         default: ;
         }
     }
@@ -95,9 +98,9 @@ int FPathPlanAndExeDlg::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 6;
     }
     return _id;
 }

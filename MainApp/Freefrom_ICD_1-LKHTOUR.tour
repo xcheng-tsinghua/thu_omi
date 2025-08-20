@@ -1,12 +1,15 @@
-NAME : part4.213.tour
-COMMENT : Length = 213
-COMMENT : Found by LKH [Keld Helsgaun] Thu Jul 04 15:29:30 2024
+NAME : part7.855.tour
+COMMENT : Length = 855
+COMMENT : Found by LKH [Keld Helsgaun] Wed Aug 20 16:00:48 2025
 TYPE : TOUR
-DIMENSION : 4
+DIMENSION : 7
 TOUR_SECTION
 1
 2
 3
+7
+5
 4
+6
 -1
 EOF

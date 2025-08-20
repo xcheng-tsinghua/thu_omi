@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ErrCompsteDlg.h'
 **
-** Created: Tue Aug 19 21:24:09 2025
+** Created: Wed Aug 20 14:04:44 2025
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.3)
 **
 ** WARNING! All changes made in this file will be lost!

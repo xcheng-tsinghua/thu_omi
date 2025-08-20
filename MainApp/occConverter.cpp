@@ -65,6 +65,7 @@ occConverter::occConverter()
 	m_pBody = new FBody();
 	m_pTree = new QTreeWidgetItem();
 	m_pTree->setHidden(false);
+	mp_all_mesh = new ON_Mesh;
 
 	m_pProgBar = new QProgressDialog;
 	m_pProgBar->setMinimumWidth(500);
@@ -372,6 +373,11 @@ void occConverter::setAllSurfColorDefault()
 
 	}
 
+}
+
+ON_Mesh* occConverter::GetModelMesh()
+{
+	return mp_all_mesh;
 }
 
 void occConverter::faceConvert(TColgp_SequenceOfPnt aPoints,Handle_Geom_Surface aSurf)
@@ -1219,6 +1225,8 @@ QList<QTreeWidgetItem*> occConverter::loadPart(TDF_Label pLabel, Handle(XCAFDoc_
 
 		if (pON_Mesh == NULL) continue;
 		if (!pON_Mesh->IsValid()) continue;
+
+		mp_all_mesh->Append(*pON_Mesh);
 
 		// Ã·»°—’…´
 		Quantity_Color faceColor;
