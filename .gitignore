@@ -6,7 +6,6 @@ ipch/
 MainApp/Debug/
 MainApp/GeneratedFiles/
 MainApp/images/
-MainApp/images/
 MainApp/Release/
 model/
 msvc/
@@ -15,4 +14,5 @@ NC_Inspection/
 Props/
 Release/
 sqldrivers/
+MainApp.sdf
 
