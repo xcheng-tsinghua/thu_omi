@@ -1,0 +1,156 @@
+LKH用户接口和参数说明
+输入通过两个独立的文件：
+1）	Problem_file
+2）	Parameter_file
+即 问题文件和参数文件。
+
+问题文件的格式的TSPLIB的格式，这个文件属于中间的文件，不需要太关心。
+参数文件的格式
+
+所有参数采用<keyword> = <value> 的格式给出具体值。<Keyword>是字母数字的关键词，<value>表示字母或数字的值。关键词不区分大小写。
+
+强制参数:
+PROBLEM_FILE = <string>
+问题文件的文件名。
+TOUR_FILE = <string>
+输出路径文件的文件名。
+
+可选参数：
+ASCENT_CANDIDATES = <integer>
+默认：50
+
+BACKBONE_TRIALS = <integer>
+默认： 0
+
+BACKTRACKING = { YES | NO }
+默认:NO
+
+CANDIDATE_FILE = <string>
+默认：无
+
+CANDIDATE_SET_TYPE = { ALPHA | DELAUNAY [ PURE ] | NEAREST-NEIGHBOR | QUADRANT }
+默认：ALPHA
+
+COMMENT <string>
+# <string>
+评论或注释
+
+EOF
+输入数据的终止符。
+
+EXCESS = <real>
+默认：1.0/DIMENSION.
+
+EXTRA_CANDIDATES = <integer> [ SYMMETRIC ]
+默认：0
+
+EXTRA_CANDIDATE_SET_TYPE = { NEAREST-NEIGHBOR | QUADRANT }
+默认：QUADRANT
+
+GAIN23 = [ YES | NO ]
+默认：YES
+
+GAIN_CRITERION ={ YES | NO }
+默认：YES
+
+INITIAL_PERIOD = <integer>
+默认： DIMENSION/2(at least 100)
+
+INITIAL_STEP_SIZE = <integer>
+默认：1
+
+INITIAL_TOUR_ALGORITHM ={ BORUVKA | GREEDY | MOORE |
+NEAREST-NEIGHBOR | QUICK-BORUVKA |
+SIERPINSKI | WALK }
+默认： WALK
+
+INITIAL_TOUR_FILE = <string>
+初始路径序列以-1为终止。
+默认： 无
+
+INITIAL_TOUR_FRACTION = <real in [0;1]>
+默认: 1.0
+
+INPUT_TOUR_FILE = <string>
+-1为终止符
+
+KICKS = <integer>
+默认： 1
+
+KICK_TYPE = <integer>
+
+默认： 0
+
+MAX_BREADTH = <integer> 
+默认：INT_MAX
+
+MAX_CANDIDATES = <integer> { SYMMETRIC }
+默认：5
+
+MAX_SWAPS = <integer>
+默认：DIMENSION
+
+MAX_TRIALS = <integer>
+默认：DIMENSION
+
+MERGE_TOUR_FILE = <string>
+默认：无
+
+MOVE_TYPE = <integer>
+默认：5
+
+NONSEQUENTIAL_MOVE_TYPE = <integer>
+默认：MOVE_TYPE + PATCHING_A + PATCHING_B – 1
+
+OUTPUT_TOUR_FILE = <string>
+默认：无
+
+OPTIMUM = <real>
+默认：LLONG_MIN
+
+PATCHING_A = <integer> [ RESTRICTED | EXTENDED ]
+默认：1
+
+PATCHING_C = <integer> [ RESTRICTED | EXTENDED ]
+默认：0
+
+PI_FILE = <string>
+默认：0
+
+POPULATION_SIZE=<integer>
+默认：0
+
+PRECISION = <integer>
+默认：100
+RESTRICTED_SEARCH = [ YES | NO ]
+默认：YES
+
+RUNS = <integer>
+默认： 1
+
+SEED = <integer>
+默认： 1
+STOP_AT_OPTIMUM = [ YES | NO ]
+默认:YES
+
+SUBGRADIENT = [ YES | NO ]
+默认：YES
+
+SUBPROBLEM_SIZE = <integer> [ DELAUNAY | KARP | K-MEANS | MOORE |
+SIERPINSKI ] [ BORDERS ] [ COMPRESSED ]
+默认： 0
+
+SUBPROBLEM_TOUR_FILE = <string>
+-1
+
+SUBSEQUENT_MOVE_TYPE = <integer>
+默认：0
+
+SUBSEQUENT_PATCHING = { YES | NO }
+默认：YES
+
+TIME_LIMIT = <real>
+
+
+TRACE_LEVEL = <integer>
+默认：1

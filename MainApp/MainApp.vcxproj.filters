@@ -1,0 +1,1055 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="PathPlanning">
+      <UniqueIdentifier>{60b8e8db-c1ec-4bda-90c3-6486a7618a06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Images">
+      <UniqueIdentifier>{2c8f6f09-94e1-40d2-ac65-d7b225cda23d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kernels">
+      <UniqueIdentifier>{3caa83eb-dd6b-43a1-8db9-19efdf266cb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MOC">
+      <UniqueIdentifier>{3f164998-ae2c-4519-b9d2-7b19b9089f71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{d9444f67-c233-4d91-b5e4-592b97ddf364}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Style">
+      <UniqueIdentifier>{4d651458-6059-4b53-9e9a-f560eb8517c5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FAdjustAngleProbe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FAdjustMachine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FAdjustRingProbe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FAdjustUpSphere.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FCodeWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FDataWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FGuideDataType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FPathPlan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FreadFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FStatVisualWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FSubwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FTHP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FTreeWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FUtilities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FXMLReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FMainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qcustomplot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TriTriIntersect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\Reader\IOComputeDistance.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\Reader\IOeprintf.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\Reader\IOfscanint.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\Reader\IOReadLine.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\Reader\IOReadProblem.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\Reader\IOReadTour.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\Reader\IOWrite.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Activate.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\AddCandidate.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\AddExtraCandidates.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\AddTourCandidates.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\AdjustCandidateSet.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\AllocateStructures.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Ascent.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Best2OptMove.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Best3OptMove.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Best4OptMove.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Best5OptMove.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\BestKOptMove.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Between.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Between_SL.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Between_SSL.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\BridgeGain.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\BuildKDTree.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\C.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\CandidateReport.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\ChooseInitialTour.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\CLKHmain.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\CLKHReadProblem.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\CLKHWriteTour.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Connect.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\CreateCandidateSet.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\CreateDelaunayCandidateSet.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\CreateQuadrantCandidateSet.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Delaunay.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Distance.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Distance_SPECIAL.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\eprintf.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\ERXT.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Excludable.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Exclude.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\FindTour.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Flip.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Flip_SL.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Flip_SSL.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Forbidden.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\FreeStructures.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\fscanint.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Gain23.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\GenerateCandidates.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Genetic.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\GeoConversion.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\GetTime.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\GreedyTour.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Hashing.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Heap.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\IsBackboneCandidate.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\IsCandidate.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\IsCommonEdge.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\IsPossibleCandidate.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\KSwapKick.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\LinKernighan.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\LKHmain.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Make2OptMove.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Make3OptMove.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Make4OptMove.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Make5OptMove.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\MakeKOptMove.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\MergeTourWithBestTour.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\MergeWithTour.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Minimum1TreeCost.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\MinimumSpanningTree.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\NormalizeNodeList.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\NormalizeSegmentList.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\OrderCandidateSet.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\PatchCycles.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\printff.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\PrintParameters.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Random.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\ReadCandidates.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\ReadLine.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\ReadParameters.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\ReadPenalties.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\ReadProblem.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\RecordBestTour.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\RecordBetterTour.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\RemoveFirstActive.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\ResetCandidateSet.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\RestoreTour.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SegmentSize.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Sequence.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SFCTour.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveCompressedSubproblem.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveCTSP.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveDelaunaySubproblems.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveKarpSubproblems.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveKCenterSubproblems.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveKMeansSubproblems.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveRoheSubproblems.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveSFCSubproblems.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveSubproblem.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveSubproblemBorderProblems.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveTourSegmentSubproblems.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveTSP.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Statistics.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\StoreTour.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SymmetrizeCandidateSet.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\TrimCandidateSet.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\WriteCandidates.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\WritePenalties.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\WriteTour.c">
+      <Filter>PathPlanning</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_FAdjustAngleProbe.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_FAdjustMachine.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_FAdjustRingProbe.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_FAdjustUpSphere.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_FCodeWnd.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_FDataWnd.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_FStatVisualWnd.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_FSubwindow.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_FTreeWnd.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_qcustomplot.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_MainDoc.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\FSelectTool.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_icons.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="FAccuracyEvaluation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ManualPointTool.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\DataTransferTool.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="FProbeComp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_ManualPointTool.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_FAccuracyEvaluation.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="occConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FInsFeaTreeWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FInsFeatureDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_FInsFeatureDlg.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="FInsFeature.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SamplingFreeSurf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FPathPlanAndExeDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AccuEvaluWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FInsReportDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_AccuEvaluWnd.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_FInsReportDlg.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="ToleranceFunction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="np.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InsReportFig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InsFeaUnitPainter_Rep.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_InsReportFig.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="ProbeVis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InspVis_thread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityHighlight.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="CoorTrans.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OrignManualTool.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_CustomTitle.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_TitleBar.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_WindowTitle.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="FToolPathDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FGroupPathPlan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_FToolPathDlg.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="InspReportInfoDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_FPathPlanAndExeDlg.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_InspReportInfoDlg.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_FGroupPathPlan.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_FInsFeaTreeWnd.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_EntityHighlight.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoInsFea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_AutoInsFea.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="SurfNearbyGraph_Node.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FInsFeaGraph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_FInsFeaGraph.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="SetCoorPrecisely.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_SetCoorPrecisely.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="PointPlanDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrCompsteDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\ErrCompsteTool.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomTitle.cpp">
+      <Filter>Style</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleBar.cpp">
+      <Filter>Style</Filter>
+    </ClCompile>
+    <ClCompile Include="tool_button.cpp">
+      <Filter>Style</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowTitle.cpp">
+      <Filter>Style</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_CoorTrans.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="NCEditDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_NCEditDlg.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_FTest.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="MeasPt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PathShow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\InsFeaTool.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\ToolPathTool.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="SamplingBasicFace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_FMainWindow.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="CompCylinTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CompSurfTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CompWThickTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_PointPlanDlg.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_CompCylinTab.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_CompSurfTab.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_CompWThickTab.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_ErrCompsteDlg.cpp">
+      <Filter>MOC</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FGuideDataType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FPathPlan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FreadFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FTHP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FUtilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FXMLReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TriTriIntersect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PathPlan\Reader\io.h">
+      <Filter>PathPlanning</Filter>
+    </ClInclude>
+    <ClInclude Include="PathPlan\Reader\iotype.h">
+      <Filter>PathPlanning</Filter>
+    </ClInclude>
+    <ClInclude Include="PathPlan\TSPSOLVER\LKH\SRC\Delaunay.h">
+      <Filter>PathPlanning</Filter>
+    </ClInclude>
+    <ClInclude Include="PathPlan\TSPSOLVER\LKH\SRC\GainType.h">
+      <Filter>PathPlanning</Filter>
+    </ClInclude>
+    <ClInclude Include="PathPlan\TSPSOLVER\LKH\SRC\Genetic.h">
+      <Filter>PathPlanning</Filter>
+    </ClInclude>
+    <ClInclude Include="PathPlan\TSPSOLVER\LKH\SRC\GeoConversion.h">
+      <Filter>PathPlanning</Filter>
+    </ClInclude>
+    <ClInclude Include="PathPlan\TSPSOLVER\LKH\SRC\Hashing.h">
+      <Filter>PathPlanning</Filter>
+    </ClInclude>
+    <ClInclude Include="PathPlan\TSPSOLVER\LKH\SRC\Heap.h">
+      <Filter>PathPlanning</Filter>
+    </ClInclude>
+    <ClInclude Include="PathPlan\TSPSOLVER\LKH\SRC\LKH.h">
+      <Filter>PathPlanning</Filter>
+    </ClInclude>
+    <ClInclude Include="PathPlan\TSPSOLVER\LKH\SRC\LKHSolver.h">
+      <Filter>PathPlanning</Filter>
+    </ClInclude>
+    <ClInclude Include="PathPlan\TSPSOLVER\LKH\SRC\Segment.h">
+      <Filter>PathPlanning</Filter>
+    </ClInclude>
+    <ClInclude Include="PathPlan\TSPSOLVER\LKH\SRC\Sequence.h">
+      <Filter>PathPlanning</Filter>
+    </ClInclude>
+    <ClInclude Include="PathPlan\TSPSOLVER\LKH\SRC\unistd.h">
+      <Filter>PathPlanning</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\CSGBoolean.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\FContour.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\FDoc.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\FEntity.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\FFeatureTool.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\FFrame.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\FileIO.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\FKernelDefines.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\FKernelHeader.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\FKernelUtilities.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\FMaterial.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\FView.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FArrow.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FBody.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FCurve.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FDart.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FEdge.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FEulerOperator.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FFace.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FHEdge.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FLoop.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FMesh.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FSketch.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FSurface.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FSurfaceCurve.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FTransFrame.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FVertex.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\QuadNode.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\QuadTree.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\SketchStroke.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\Tessellation.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\triangle.h">
+      <Filter>Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\FSelectTool.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\DataTransferTool.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="FProbeComp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="occConverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FInsFeature.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SamplingFreeSurf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ToleranceFunction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="np.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InsFeaUnitPainter_Rep.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProbeVis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InspVis_thread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OrignManualTool.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="SurfNearbyGraph_Node.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tool_button.h">
+      <Filter>Style</Filter>
+    </ClInclude>
+    <ClInclude Include="MeasPt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PathShow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="connection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\InsFeaTool.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\ToolPathTool.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="SamplingBasicFace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\ErrCompsteTool.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\about.png">
+      <Filter>Images</Filter>
+    </None>
+    <None Include="PathPlan\TSPSOLVER\LKH\SRC\Makefile">
+      <Filter>PathPlanning</Filter>
+    </None>
+    <None Include="PathPlan\TSPSOLVER\LKH\SRC\参数说明.txt">
+      <Filter>PathPlanning</Filter>
+    </None>
+    <None Include="UI\tcpfilesenderdialog.ui">
+      <Filter>Source Files\Resource Files</Filter>
+    </None>
+    <None Include="cpp.hint" />
+    <None Include="MOC.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="UI\MainWindow.ui">
+      <Filter>Source Files\Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FAdjustAngleProbe.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FAdjustMachine.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FAdjustRingProbe.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FAdjustUpSphere.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FCodeWnd.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FDataWnd.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FStatVisualWnd.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FSubwindow.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FTreeWnd.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qcustomplot.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FMainWindow.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MainDoc.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="images\icons.qrc">
+      <Filter>Source Files\Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FAccuracyEvaluation.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ManualPointTool.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FInsFeaTreeWnd.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FInsFeatureDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FPathPlanAndExeDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="AccuEvaluWnd.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FInsReportDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="InsReportFig.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CoorTrans.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FToolPathDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="InspReportInfoDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FGroupPathPlan.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="EntityHighlight.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="AutoInsFea.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FInsFeaGraph.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="SetCoorPrecisely.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PointPlanDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ErrCompsteDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CustomTitle.h">
+      <Filter>Style</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TitleBar.h">
+      <Filter>Style</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WindowTitle.h">
+      <Filter>Style</Filter>
+    </CustomBuild>
+    <CustomBuild Include="NCEditDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FTest.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CompCylinTab.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CompSurfTab.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CompWThickTab.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\myapp.rc">
+      <Filter>Source Files\Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

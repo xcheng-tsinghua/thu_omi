@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UiMainWindow</class>
+ <widget class="QMainWindow" name="UiMainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1298</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>ThuOMI</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../../jackyzeng/.designer/images/avic.png</normaloff>../../../../jackyzeng/.designer/images/avic.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>6</number>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_new"/>
+   <addaction name="action_open"/>
+   <addaction name="action_saveas"/>
+   <addaction name="separator"/>
+   <addaction name="action_pan"/>
+   <addaction name="action_zoomall"/>
+   <addaction name="action_meshdisp"/>
+   <addaction name="action_smoothdisp"/>
+   <addaction name="action_wiredisp"/>
+   <addaction name="separator"/>
+   <addaction name="actionMeasureStart"/>
+   <addaction name="actionMeasurePause"/>
+   <addaction name="actionMeasureReset"/>
+   <addaction name="separator"/>
+   <addaction name="actionOPC_ON"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QToolBar" name="TopMargin">
+   <property name="windowTitle">
+    <string>TopMargin</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>true</bool>
+   </attribute>
+  </widget>
+  <widget class="QToolBar" name="LeftMargin">
+   <property name="windowTitle">
+    <string>LeftMargin</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QToolBar" name="RightMargin">
+   <property name="windowTitle">
+    <string>RightMargin</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>RightToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QToolBar" name="BottomMargin">
+   <property name="windowTitle">
+    <string>BottomMargin</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1298</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei UI</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string> 文件(F) </string>
+    </property>
+    <addaction name="action_new"/>
+    <addaction name="action_open"/>
+    <addaction name="action_importGuide"/>
+    <addaction name="action_save"/>
+    <addaction name="action_quit"/>
+    <addaction name="separator"/>
+    <addaction name="action_importTheoData"/>
+    <addaction name="action_importMeaData"/>
+    <addaction name="separator"/>
+    <addaction name="action_exportTheoData"/>
+    <addaction name="action_exportResult"/>
+    <addaction name="separator"/>
+    <addaction name="action_exportRep"/>
+    <addaction name="action_ImportInspConfig"/>
+   </widget>
+   <widget class="QMenu" name="menu_Help">
+    <property name="title">
+     <string> 帮助(H) </string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menu_View">
+    <property name="title">
+     <string> 视图(V) </string>
+    </property>
+    <addaction name="action_topview"/>
+    <addaction name="action_bottomview"/>
+    <addaction name="action_frontview"/>
+    <addaction name="action_backview"/>
+    <addaction name="action_rightview"/>
+    <addaction name="action_leftview"/>
+    <addaction name="separator"/>
+    <addaction name="action_zoomin"/>
+    <addaction name="action_zoomout"/>
+    <addaction name="action_zoomall"/>
+    <addaction name="action_pan"/>
+    <addaction name="action_orbit"/>
+    <addaction name="separator"/>
+    <addaction name="action_smoothdisp"/>
+    <addaction name="action_meshdisp"/>
+    <addaction name="action_wiredisp"/>
+   </widget>
+   <widget class="QMenu" name="menuTest">
+    <property name="title">
+     <string> 临时(E) </string>
+    </property>
+    <addaction name="actionTestDialog"/>
+    <addaction name="actionTest_Others"/>
+   </widget>
+   <widget class="QMenu" name="menuMeasure">
+    <property name="title">
+     <string> 测量(M) </string>
+    </property>
+    <addaction name="actionPointPlan_2"/>
+    <addaction name="separator"/>
+    <addaction name="actionCoordTrans"/>
+    <addaction name="actionGroupPathPlan"/>
+   </widget>
+   <widget class="QMenu" name="menu_P">
+    <property name="title">
+     <string> 加工(P) </string>
+    </property>
+    <addaction name="actionErrorComp"/>
+    <addaction name="actionToolPathDlg"/>
+   </widget>
+   <widget class="QMenu" name="menu_C">
+    <property name="title">
+     <string>标定(C)</string>
+    </property>
+    <addaction name="action_FProbe2"/>
+    <addaction name="action_FProbe3"/>
+    <addaction name="action_FProbe1"/>
+    <addaction name="action_FProbe0"/>
+    <addaction name="action_ProbeMachine"/>
+    <addaction name="separator"/>
+    <addaction name="actionSetCoorPrecisely"/>
+    <addaction name="actionCoorAlt"/>
+   </widget>
+   <widget class="QMenu" name="menu_L">
+    <property name="title">
+     <string>仿真(L)</string>
+    </property>
+    <addaction name="actionMeasureStart"/>
+    <addaction name="actionMeasurePause"/>
+    <addaction name="actionMeasureReset"/>
+   </widget>
+   <widget class="QMenu" name="menu_T">
+    <property name="title">
+     <string>测试(T)</string>
+    </property>
+    <addaction name="actionOutNCFile"/>
+    <addaction name="actionOutDimFile"/>
+    <addaction name="separator"/>
+    <addaction name="actionMesPathPlanning"/>
+    <addaction name="actionMesRePath"/>
+    <addaction name="actionFiveAxisPathPlan"/>
+   </widget>
+   <widget class="QMenu" name="menu_N">
+    <property name="title">
+     <string>连接(N)</string>
+    </property>
+    <addaction name="actionOpcUaTHU"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_View"/>
+   <addaction name="menu_N"/>
+   <addaction name="menu_C"/>
+   <addaction name="menuMeasure"/>
+   <addaction name="menu_P"/>
+   <addaction name="menu_L"/>
+   <addaction name="menu_T"/>
+   <addaction name="menu_Help"/>
+   <addaction name="menuTest"/>
+  </widget>
+  <action name="action_new">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/file/File/new.png</normaloff>:/file/File/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;New</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="action_open">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/file/File/open.png</normaloff>:/file/File/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_save">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/file/File/save_as.png</normaloff>:/file/File/save_as.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_saveas">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/file/File/save_as.png</normaloff>:/file/File/save_as.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save as ...</string>
+   </property>
+  </action>
+  <action name="action_quit">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/file/File/exit.png</normaloff>:/file/File/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="action_undo">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/edit/Edit/undo.png</normaloff>:/edit/Edit/undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Undo</string>
+   </property>
+  </action>
+  <action name="action_redo">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/edit/Edit/redo.png</normaloff>:/edit/Edit/redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Redo</string>
+   </property>
+  </action>
+  <action name="action_topview">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/View/View/topview.png</normaloff>:/View/View/topview.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Top</string>
+   </property>
+   <property name="shortcut">
+    <string>T</string>
+   </property>
+  </action>
+  <action name="action_frontview">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/View/View/frontview.png</normaloff>:/View/View/frontview.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Front</string>
+   </property>
+   <property name="shortcut">
+    <string>F</string>
+   </property>
+  </action>
+  <action name="action_rightview">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/View/View/rightview.png</normaloff>:/View/View/rightview.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Right</string>
+   </property>
+   <property name="shortcut">
+    <string>R</string>
+   </property>
+  </action>
+  <action name="action_backview">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/View/View/backview.png</normaloff>:/View/View/backview.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Back</string>
+   </property>
+  </action>
+  <action name="action_zoomin">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/View/View/zoom_in.png</normaloff>:/View/View/zoom_in.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom in</string>
+   </property>
+  </action>
+  <action name="action_zoomout">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/View/View/zoom_out.png</normaloff>:/View/View/zoom_out.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom out</string>
+   </property>
+  </action>
+  <action name="action_zoomall">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/View/View/zoom_all.png</normaloff>:/View/View/zoom_all.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom all</string>
+   </property>
+   <property name="shortcut">
+    <string>Z</string>
+   </property>
+  </action>
+  <action name="action_pan">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/View/View/pan.png</normaloff>:/View/View/pan.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Pan</string>
+   </property>
+  </action>
+  <action name="action_orbit">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/View/View/orbit.png</normaloff>:/View/View/orbit.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Orbit</string>
+   </property>
+  </action>
+  <action name="action_smoothdisp">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/View/View/smooth_shadingview.png</normaloff>:/View/View/smooth_shadingview.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Smooth display</string>
+   </property>
+  </action>
+  <action name="action_meshdisp">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/View/View/meshview.png</normaloff>:/View/View/meshview.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Mesh display</string>
+   </property>
+  </action>
+  <action name="action_errormap">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Analysis/Analysis/errormap.png</normaloff>:/Analysis/Analysis/errormap.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Error map</string>
+   </property>
+  </action>
+  <action name="action_leftview">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/View/View/leftview.png</normaloff>:/View/View/leftview.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Left</string>
+   </property>
+   <property name="shortcut">
+    <string>L</string>
+   </property>
+  </action>
+  <action name="action_bottomview">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/View/View/bottomview.png</normaloff>:/View/View/bottomview.png</iconset>
+   </property>
+   <property name="text">
+    <string>Bottom</string>
+   </property>
+   <property name="shortcut">
+    <string>B</string>
+   </property>
+  </action>
+  <action name="action_isoview">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/View/View/isometricview.png</normaloff>:/View/View/isometricview.png</iconset>
+   </property>
+   <property name="text">
+    <string>Isometric</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/help/about.png</normaloff>:/help/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="action_pointdisp">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/View/View/pointview.png</normaloff>:/View/View/pointview.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Point display</string>
+   </property>
+  </action>
+  <action name="action_planeintersect">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Analysis/Analysis/planeintersect.png</normaloff>:/Analysis/Analysis/planeintersect.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Plane-Intersect</string>
+   </property>
+   <property name="statusTip">
+    <string>Intersectt plane with selected model.</string>
+   </property>
+  </action>
+  <action name="action_pointregistration">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Reconstruction/Reconstruction/pointregistration.png</normaloff>:/Reconstruction/Reconstruction/pointregistration.png</iconset>
+   </property>
+   <property name="text">
+    <string>Point Registration</string>
+   </property>
+  </action>
+  <action name="action_meshreconstruct">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Reconstruction/Reconstruction/meshreconstruct.png</normaloff>:/Reconstruction/Reconstruction/meshreconstruct.png</iconset>
+   </property>
+   <property name="text">
+    <string>Mesh Reconstruct</string>
+   </property>
+  </action>
+  <action name="action_PointSlicing">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Reconstruction/Reconstruction/pointslicing.png</normaloff>:/Reconstruction/Reconstruction/pointslicing.png</iconset>
+   </property>
+   <property name="text">
+    <string>Point Slicing</string>
+   </property>
+  </action>
+  <action name="action_meshoffset">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Reconstruction/Reconstruction/meshoffset.png</normaloff>:/Reconstruction/Reconstruction/meshoffset.png</iconset>
+   </property>
+   <property name="text">
+    <string>Mesh Offset</string>
+   </property>
+  </action>
+  <action name="actionTestDialog">
+   <property name="text">
+    <string>TestDialog</string>
+   </property>
+  </action>
+  <action name="actionTest_Others">
+   <property name="text">
+    <string>Test Others</string>
+   </property>
+  </action>
+  <action name="actionMeasureStart">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/Measure/Measure/start.png</normaloff>:/Measure/Measure/start.png</iconset>
+   </property>
+   <property name="text">
+    <string>开始</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+S</string>
+   </property>
+  </action>
+  <action name="actionInspectConfig">
+   <property name="text">
+    <string>测量配置模式</string>
+   </property>
+  </action>
+  <action name="actionInspectMode">
+   <property name="text">
+    <string>测量过程模式</string>
+   </property>
+  </action>
+  <action name="actionInspectAnalysis">
+   <property name="text">
+    <string>测量分析模式</string>
+   </property>
+  </action>
+  <action name="actionMeasurePause">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/Measure/Measure/pause.png</normaloff>:/Measure/Measure/pause.png</iconset>
+   </property>
+   <property name="text">
+    <string>暂停</string>
+   </property>
+  </action>
+  <action name="actionMeasureReset">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/Measure/Measure/reset.png</normaloff>:/Measure/Measure/reset.png</iconset>
+   </property>
+   <property name="text">
+    <string>重置</string>
+   </property>
+  </action>
+  <action name="action_wiredisp">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/View/View/wireview.png</normaloff>:/View/View/wireview.png</iconset>
+   </property>
+   <property name="text">
+    <string>Wire display</string>
+   </property>
+  </action>
+  <action name="actionToolResetLayout">
+   <property name="text">
+    <string>重置窗口布局</string>
+   </property>
+  </action>
+  <action name="action_importGuide">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/file/File/open.png</normaloff>:/file/File/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>导入指导文件</string>
+   </property>
+  </action>
+  <action name="action_ProbeMachine">
+   <property name="text">
+    <string>标定机床</string>
+   </property>
+  </action>
+  <action name="action_FProbe0">
+   <property name="text">
+    <string>标定环规</string>
+   </property>
+  </action>
+  <action name="action_FProbe1">
+   <property name="text">
+    <string>标定固定摆角</string>
+   </property>
+  </action>
+  <action name="action_FProbe2">
+   <property name="text">
+    <string>标定上半球</string>
+   </property>
+  </action>
+  <action name="action_FProbe3">
+   <property name="text">
+    <string>标定下半球</string>
+   </property>
+  </action>
+  <action name="actionToolComputeError">
+   <property name="text">
+    <string>计算特征精度</string>
+   </property>
+  </action>
+  <action name="actionToolSelSurf">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/Tools/Tools/selectSurface.png</normaloff>:/Tools/Tools/selectSurface.png</iconset>
+   </property>
+   <property name="text">
+    <string>选择面</string>
+   </property>
+  </action>
+  <action name="actionRecogRib">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/Analysis/Analysis/RibRecognition.png</normaloff>:/Analysis/Analysis/RibRecognition.png</iconset>
+   </property>
+   <property name="text">
+    <string>筋识别</string>
+   </property>
+  </action>
+  <action name="actionRecogSlot">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/Analysis/Analysis/SlotRecognition.png</normaloff>:/Analysis/Analysis/SlotRecognition.png</iconset>
+   </property>
+   <property name="text">
+    <string>槽识别</string>
+   </property>
+  </action>
+  <action name="actionRecogProfile">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/Analysis/Analysis/ProfileRecognition.png</normaloff>:/Analysis/Analysis/ProfileRecognition.png</iconset>
+   </property>
+   <property name="text">
+    <string>轮廓识别</string>
+   </property>
+  </action>
+  <action name="actionToolSetLocalFrame">
+   <property name="icon">
+    <iconset>
+     <normaloff>../images/Tools/localframe.png</normaloff>../images/Tools/localframe.png</iconset>
+   </property>
+   <property name="text">
+    <string>设置工件坐标系</string>
+   </property>
+  </action>
+  <action name="actionOutDimFile">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/Measure/Measure/dimfile.png</normaloff>:/Measure/Measure/dimfile.png</iconset>
+   </property>
+   <property name="text">
+    <string>输出DIM文件</string>
+   </property>
+  </action>
+  <action name="actionMesPathPlanning">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/Measure/Measure/pathplanning.png</normaloff>:/Measure/Measure/pathplanning.png</iconset>
+   </property>
+   <property name="text">
+    <string>路径规划</string>
+   </property>
+  </action>
+  <action name="actionRecogHole">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../../../毕设资料/总结文档/孔.png</normaloff>../../../../毕设资料/总结文档/孔.png</iconset>
+   </property>
+   <property name="text">
+    <string>孔识别</string>
+   </property>
+  </action>
+  <action name="actionOutNCFile">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/Measure/Measure/ncfile.png</normaloff>:/Measure/Measure/ncfile.png</iconset>
+   </property>
+   <property name="text">
+    <string>输出数控程序文件</string>
+   </property>
+  </action>
+  <action name="actionToolSelPnt">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/Tools/Tools/selectPoint.png</normaloff>:/Tools/Tools/selectPoint.png</iconset>
+   </property>
+   <property name="text">
+    <string>选择测点</string>
+   </property>
+  </action>
+  <action name="actionMesRePath">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/Measure/Measure/regeneratePath.png</normaloff>:/Measure/Measure/regeneratePath.png</iconset>
+   </property>
+   <property name="text">
+    <string>重新生成路径</string>
+   </property>
+  </action>
+  <action name="actionFiveAxisPathPlan">
+   <property name="text">
+    <string>五轴路径规划</string>
+   </property>
+  </action>
+  <action name="actionPointPlan">
+   <property name="text">
+    <string>测点规划</string>
+   </property>
+  </action>
+  <action name="actionOpcUaTHU">
+   <property name="text">
+    <string>OPCUA变量监控</string>
+   </property>
+  </action>
+  <action name="actionSurfaceEval">
+   <property name="text">
+    <string>平面度精度评定</string>
+   </property>
+  </action>
+  <action name="action_TCPConfig">
+   <property name="text">
+    <string>机床TCP连接配置</string>
+   </property>
+  </action>
+  <action name="actionOPC_ON">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/Measure/Measure/start.png</normaloff>:/Measure/Measure/start.png</iconset>
+   </property>
+   <property name="text">
+    <string>OPC_ON</string>
+   </property>
+   <property name="toolTip">
+    <string>OPC UA data transfer</string>
+   </property>
+  </action>
+  <action name="actionCoordTrans">
+   <property name="text">
+    <string>路径规划及执行</string>
+   </property>
+  </action>
+  <action name="action_importMeaData">
+   <property name="text">
+    <string>导入实际测量数据</string>
+   </property>
+  </action>
+  <action name="action_exportTheoData">
+   <property name="text">
+    <string>导出理论测点数据</string>
+   </property>
+  </action>
+  <action name="action_exportResult">
+   <property name="text">
+    <string>导出实际测量数据</string>
+   </property>
+  </action>
+  <action name="action_importTheoData">
+   <property name="text">
+    <string>导入理论测点数据</string>
+   </property>
+  </action>
+  <action name="action_exportRep">
+   <property name="text">
+    <string>导出测量报告</string>
+   </property>
+  </action>
+  <action name="actionInsFeature">
+   <property name="text">
+    <string>生成检测特征</string>
+   </property>
+  </action>
+  <action name="actionPointPlan_2">
+   <property name="text">
+    <string>测点规划</string>
+   </property>
+  </action>
+  <action name="actionCoorAlt">
+   <property name="text">
+    <string>变更全局坐标系</string>
+   </property>
+  </action>
+  <action name="actionToolPathDlg">
+   <property name="text">
+    <string>刀路规划</string>
+   </property>
+  </action>
+  <action name="action_ImportInspConfig">
+   <property name="text">
+    <string>导入检测配置</string>
+   </property>
+  </action>
+  <action name="actionGroupPathPlan">
+   <property name="text">
+    <string>分组检测规划</string>
+   </property>
+  </action>
+  <action name="actionDefaultSetting">
+   <property name="text">
+    <string>恢复默认设置</string>
+   </property>
+  </action>
+  <action name="actionSetCoorPrecisely">
+   <property name="text">
+    <string>精定坐标系</string>
+   </property>
+  </action>
+  <action name="actionErrorComp">
+   <property name="text">
+    <string>误差补偿</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../images/icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,8 @@
+
+MOC √¸¡Ó
+
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." 
+Moc%27ing %(Filename).h...
+$(ProjectDir)moc\moc_%(Filename).cpp
+$(QTDIR)\bin\moc.exe;%(FullPath)
+

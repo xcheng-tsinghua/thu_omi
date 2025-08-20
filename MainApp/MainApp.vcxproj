@@ -1,0 +1,682 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CBD80405-827B-49EB-95CF-B3615CF54C79}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MainApp</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Props\QtDebug.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Props\QtRelease.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <TargetName>ThuOMId</TargetName>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Release\</OutDir>
+    <TargetName>ThuOMI</TargetName>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)MySQL\include;$(SolutionDir)external\vflib\include;$(SolutionDir)external\Eigen;$(OPENCASCADEHEADER);$(SolutionDir)occi win32\instantclient-sdk-nt-21.10.0.0.0dbru\instantclient_21_10\sdk\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/DWNT %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>vflib.lib;$(KERNELLIB);$(QTLIB);$(GLLIB);$(ONLIB);kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;QtNetworkd4.lib;glut32.lib;glu32.lib;OpenGL32.lib;TKLCAF.lib;TKXDESTEP.lib;TKXCAF.lib;TKSTEP.lib;TKBinXCAF.lib;TKOpenGl.lib;TKVrml.lib;TKStl.lib;TKBrep.lib;TKIGES.lib;TKShHealing.lib;TKStep.lib;TKSTEP209.lib;TKSTEPAttr.lib;TKSTEPBase.lib;TKXSBase.lib;TKBool.lib;TKCAF.lib;TKCDF.lib;TKDraw.lib;TKernel.lib;TKFeat.lib;TKFillet.lib;TKG2d.lib;TKG3d.lib;TKGeomAlgo.lib;TKGeomBase.lib;TKHLR.lib;TKMath.lib;TKOffset.lib;TKPrim.lib;TKService.lib;TKTopAlgo.lib;TKMesh.lib;TKV3d.lib;TKVCAF.lib;WS2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBC.lib;LIBCMTD.lib</IgnoreSpecificDefaultLibraries>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(OPENCASCADELIB);$(SolutionDir)external\vflib\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)OCI\include;$(SolutionDir)MySQL\include;$(SolutionDir);$(SolutionDir)\MainApp;$(SolutionDir)\external\vflib\include;$(ONHEADER);$(QTHEADER);$(NURBSPPHEADER);$(KERNELHEADER);$(GLHEADER);$(LAPACKHEADER);$(OPENCASCADEHEADER)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)OCI\lib\msvc;$(OPENCASCADELIB);$(QTDIR)\lib;$(SolutionDir)external\vflib\lib;$(SolutionDir)MySQL\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Rpcrt4.lib;vflib.lib;$(KERNELLIB);$(QTLIB);$(GLLIB);$(ONLIB);kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;glut32.lib;glu32.lib;OpenGL32.lib;TKLCAF.lib;TKXDESTEP.lib;TKXCAF.lib;TKSTEP.lib;TKBinXCAF.lib;TKOpenGl.lib;TKVrml.lib;TKStl.lib;TKBrep.lib;TKIGES.lib;TKShHealing.lib;TKStep.lib;TKSTEP209.lib;TKSTEPAttr.lib;TKSTEPBase.lib;TKXSBase.lib;TKBool.lib;TKCAF.lib;TKCDF.lib;TKDraw.lib;TKernel.lib;TKFeat.lib;TKFillet.lib;TKG2d.lib;TKG3d.lib;TKGeomAlgo.lib;TKGeomBase.lib;TKHLR.lib;TKMath.lib;TKOffset.lib;TKPrim.lib;TKService.lib;TKTopAlgo.lib;TKMesh.lib;TKV3d.lib;TKVCAF.lib;libmysql.lib;oraocci21d.lib;oraocci21.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libc.lib</IgnoreSpecificDefaultLibraries>
+      <StackCommitSize>
+      </StackCommitSize>
+      <HeapReserveSize>500000000</HeapReserveSize>
+      <StackReserveSize>1000000</StackReserveSize>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AccuEvaluWnd.cpp" />
+    <ClCompile Include="AutoInsFea.cpp" />
+    <ClCompile Include="CompCylinTab.cpp" />
+    <ClCompile Include="CompSurfTab.cpp" />
+    <ClCompile Include="CompWThickTab.cpp" />
+    <ClCompile Include="moc\moc_CompCylinTab.cpp" />
+    <ClCompile Include="moc\moc_CompSurfTab.cpp" />
+    <ClCompile Include="moc\moc_CompWThickTab.cpp" />
+    <ClCompile Include="moc\moc_ErrCompsteDlg.cpp" />
+    <ClCompile Include="moc\moc_PointPlanDlg.cpp" />
+    <ClCompile Include="SamplingBasicFace.cpp" />
+    <ClCompile Include="ErrCompsteDlg.cpp" />
+    <ClCompile Include="PathShow.cpp" />
+    <ClCompile Include="MeasPt.cpp" />
+    <ClCompile Include="moc\moc_CoorTrans.cpp" />
+    <ClCompile Include="moc\moc_FMainWindow.cpp" />
+    <ClCompile Include="moc\moc_FTest.cpp" />
+    <ClCompile Include="moc\moc_NCEditDlg.cpp" />
+    <ClCompile Include="NCEditDlg.cpp" />
+    <ClCompile Include="SamplingFreeSurf.cpp" />
+    <ClCompile Include="CoorTrans.cpp" />
+    <ClCompile Include="EntityHighlight.cpp" />
+    <ClCompile Include="FAccuracyEvaluation.cpp" />
+    <ClCompile Include="FAdjustAngleProbe.cpp" />
+    <ClCompile Include="FAdjustMachine.cpp" />
+    <ClCompile Include="FAdjustRingProbe.cpp" />
+    <ClCompile Include="FAdjustUpSphere.cpp" />
+    <ClCompile Include="FCodeWnd.cpp" />
+    <ClCompile Include="FInsFeaGraph.cpp" />
+    <ClCompile Include="FPathPlanAndExeDlg.cpp" />
+    <ClCompile Include="FDataWnd.cpp" />
+    <ClCompile Include="FGroupPathPlan.cpp" />
+    <ClCompile Include="FGuideDataType.cpp" />
+    <ClCompile Include="FInsFeature.cpp" />
+    <ClCompile Include="FInsFeatureDlg.cpp" />
+    <ClCompile Include="FInsReportDlg.cpp" />
+    <ClCompile Include="FInsFeaTreeWnd.cpp" />
+    <ClCompile Include="FProbeComp.cpp" />
+    <ClCompile Include="FPathPlan.cpp" />
+    <ClCompile Include="FreadFile.cpp" />
+    <ClCompile Include="FStatVisualWnd.cpp" />
+    <ClCompile Include="FSubwindow.cpp" />
+    <ClCompile Include="FTest.cpp" />
+    <ClCompile Include="FTHP.cpp" />
+    <ClCompile Include="FTreeWnd.cpp" />
+    <ClCompile Include="FUtilities.cpp" />
+    <ClCompile Include="FXMLReader.cpp" />
+    <ClCompile Include="GeneratedFiles\qrc_icons.cpp" />
+    <ClCompile Include="InsFeaUnitPainter_Rep.cpp" />
+    <ClCompile Include="InspReportInfoDlg.cpp" />
+    <ClCompile Include="InsReportFig.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainDoc.cpp" />
+    <ClCompile Include="MainView.cpp" />
+    <ClCompile Include="FMainWindow.cpp" />
+    <ClCompile Include="ManualPointTool.cpp" />
+    <ClCompile Include="moc\moc_AccuEvaluWnd.cpp" />
+    <ClCompile Include="moc\moc_AutoInsFea.cpp" />
+    <ClCompile Include="moc\moc_CustomTitle.cpp" />
+    <ClCompile Include="moc\moc_EntityHighlight.cpp" />
+    <ClCompile Include="moc\moc_FAccuracyEvaluation.cpp" />
+    <ClCompile Include="moc\moc_FAdjustAngleProbe.cpp" />
+    <ClCompile Include="moc\moc_FAdjustMachine.cpp" />
+    <ClCompile Include="moc\moc_FAdjustRingProbe.cpp" />
+    <ClCompile Include="moc\moc_FAdjustUpSphere.cpp" />
+    <ClCompile Include="moc\moc_FCodeWnd.cpp" />
+    <ClCompile Include="moc\moc_FDataWnd.cpp" />
+    <ClCompile Include="moc\moc_FGroupPathPlan.cpp" />
+    <ClCompile Include="moc\moc_FInsFeaGraph.cpp" />
+    <ClCompile Include="moc\moc_FInsFeaTreeWnd.cpp" />
+    <ClCompile Include="moc\moc_FInsFeatureDlg.cpp" />
+    <ClCompile Include="moc\moc_FInsReportDlg.cpp" />
+    <ClCompile Include="moc\moc_FPathPlanAndExeDlg.cpp" />
+    <ClCompile Include="moc\moc_FStatVisualWnd.cpp" />
+    <ClCompile Include="moc\moc_FSubwindow.cpp" />
+    <ClCompile Include="moc\moc_FToolPathDlg.cpp" />
+    <ClCompile Include="moc\moc_FTreeWnd.cpp" />
+    <ClCompile Include="moc\moc_InspReportInfoDlg.cpp" />
+    <ClCompile Include="moc\moc_InsReportFig.cpp" />
+    <ClCompile Include="moc\moc_MainDoc.cpp" />
+    <ClCompile Include="moc\moc_ManualPointTool.cpp" />
+    <ClCompile Include="moc\moc_qcustomplot.cpp" />
+    <ClCompile Include="CustomTitle.cpp" />
+    <ClCompile Include="moc\moc_SetCoorPrecisely.cpp" />
+    <ClCompile Include="moc\moc_TitleBar.cpp" />
+    <ClCompile Include="moc\moc_WindowTitle.cpp" />
+    <ClCompile Include="np.cpp" />
+    <ClCompile Include="occConverter.cpp" />
+    <ClCompile Include="OrignManualTool.cpp" />
+    <ClCompile Include="PathPlan\Reader\IOComputeDistance.c" />
+    <ClCompile Include="PathPlan\Reader\IOeprintf.c" />
+    <ClCompile Include="PathPlan\Reader\IOfscanint.c" />
+    <ClCompile Include="PathPlan\Reader\IOReadLine.c" />
+    <ClCompile Include="PathPlan\Reader\IOReadProblem.c" />
+    <ClCompile Include="PathPlan\Reader\IOReadTour.c" />
+    <ClCompile Include="PathPlan\Reader\IOWrite.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Activate.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\AddCandidate.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\AddExtraCandidates.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\AddTourCandidates.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\AdjustCandidateSet.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\AllocateStructures.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Ascent.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Best2OptMove.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Best3OptMove.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Best4OptMove.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Best5OptMove.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\BestKOptMove.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Between.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Between_SL.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Between_SSL.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\BridgeGain.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\BuildKDTree.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\C.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\CandidateReport.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\ChooseInitialTour.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\CLKHmain.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\CLKHReadProblem.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\CLKHWriteTour.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Connect.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\CreateCandidateSet.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\CreateDelaunayCandidateSet.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\CreateQuadrantCandidateSet.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Delaunay.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Distance.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Distance_SPECIAL.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\eprintf.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\ERXT.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Excludable.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Exclude.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\FindTour.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Flip.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Flip_SL.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Flip_SSL.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Forbidden.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\FreeStructures.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\fscanint.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Gain23.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\GenerateCandidates.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Genetic.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\GeoConversion.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\GetTime.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\GreedyTour.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Hashing.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Heap.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\IsBackboneCandidate.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\IsCandidate.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\IsCommonEdge.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\IsPossibleCandidate.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\KSwapKick.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\LinKernighan.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\LKHmain.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Make2OptMove.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Make3OptMove.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Make4OptMove.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Make5OptMove.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\MakeKOptMove.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\MergeTourWithBestTour.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\MergeWithTour.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Minimum1TreeCost.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\MinimumSpanningTree.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\NormalizeNodeList.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\NormalizeSegmentList.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\OrderCandidateSet.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\PatchCycles.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\printff.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\PrintParameters.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Random.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\ReadCandidates.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\ReadLine.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\ReadParameters.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\ReadPenalties.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\ReadProblem.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\RecordBestTour.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\RecordBetterTour.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\RemoveFirstActive.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\ResetCandidateSet.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\RestoreTour.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SegmentSize.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Sequence.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SFCTour.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveCompressedSubproblem.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveCTSP.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveDelaunaySubproblems.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveKarpSubproblems.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveKCenterSubproblems.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveKMeansSubproblems.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveRoheSubproblems.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveSFCSubproblems.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveSubproblem.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveSubproblemBorderProblems.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveTourSegmentSubproblems.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SolveTSP.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\Statistics.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\StoreTour.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\SymmetrizeCandidateSet.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\TrimCandidateSet.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\WriteCandidates.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\WritePenalties.c" />
+    <ClCompile Include="PathPlan\TSPSOLVER\LKH\SRC\WriteTour.c" />
+    <ClCompile Include="PointPlanDlg.cpp" />
+    <ClCompile Include="qcustomplot.cpp" />
+    <ClCompile Include="SetCoorPrecisely.cpp" />
+    <ClCompile Include="ProbeVis.cpp" />
+    <ClCompile Include="InspVis_thread.cpp" />
+    <ClCompile Include="FToolPathDlg.cpp" />
+    <ClCompile Include="SurfNearbyGraph_Node.cpp" />
+    <ClCompile Include="TitleBar.cpp" />
+    <ClCompile Include="ToleranceFunction.cpp" />
+    <ClCompile Include="Tools\InsFeaTool.cpp" />
+    <ClCompile Include="Tools\ErrCompsteTool.cpp" />
+    <ClCompile Include="Tools\DataTransferTool.cpp" />
+    <ClCompile Include="Tools\FSelectTool.cpp" />
+    <ClCompile Include="Tools\ToolPathTool.cpp" />
+    <ClCompile Include="tool_button.cpp" />
+    <ClCompile Include="TriTriIntersect.cpp" />
+    <ClCompile Include="WindowTitle.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\External\fkernel\Include\CSGBoolean.h" />
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FArrow.h" />
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FBody.h" />
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FCurve.h" />
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FDart.h" />
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FEdge.h" />
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FEulerOperator.h" />
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FFace.h" />
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FHEdge.h" />
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FLoop.h" />
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FMesh.h" />
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FSketch.h" />
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FSurface.h" />
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FSurfaceCurve.h" />
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FTransFrame.h" />
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\FVertex.h" />
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\QuadNode.h" />
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\QuadTree.h" />
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\SketchStroke.h" />
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\Tessellation.h" />
+    <ClInclude Include="..\External\fkernel\Include\DataStructure\triangle.h" />
+    <ClInclude Include="..\External\fkernel\Include\FContour.h" />
+    <ClInclude Include="..\External\fkernel\Include\FDoc.h" />
+    <ClInclude Include="..\External\fkernel\Include\FEntity.h" />
+    <ClInclude Include="..\External\fkernel\Include\FFeatureTool.h" />
+    <ClInclude Include="..\External\fkernel\Include\FFrame.h" />
+    <ClInclude Include="..\External\fkernel\Include\FileIO.h" />
+    <ClInclude Include="..\External\fkernel\Include\FKernelDefines.h" />
+    <ClInclude Include="..\External\fkernel\Include\FKernelHeader.h" />
+    <ClInclude Include="..\External\fkernel\Include\FKernelUtilities.h" />
+    <ClInclude Include="..\External\fkernel\Include\FMaterial.h" />
+    <ClInclude Include="..\External\fkernel\Include\FView.h" />
+    <CustomBuild Include="FGroupPathPlan.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="AutoInsFea.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="FInsFeaGraph.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ErrCompsteDlg.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="FToolPathDlg.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="InspReportInfoDlg.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="CompCylinTab.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="CompSurfTab.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="CompWThickTab.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="SamplingBasicFace.h" />
+    <ClInclude Include="connection.h" />
+    <ClInclude Include="PathShow.h" />
+    <CustomBuild Include="SetCoorPrecisely.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="NCEditDlg.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="MeasPt.h" />
+    <ClInclude Include="SurfNearbyGraph_Node.h" />
+    <ClInclude Include="Tools\ErrCompsteTool.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </ClInclude>
+    <ClInclude Include="Tools\InsFeaTool.h" />
+    <ClInclude Include="Tools\ToolPathTool.h" />
+    <ClInclude Include="tool_button.h" />
+    <CustomBuild Include="WindowTitle.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="FAdjustAngleProbe.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="FAdjustMachine.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="FAdjustRingProbe.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="FAdjustUpSphere.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="FCodeWnd.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="FDataWnd.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="FAccuracyEvaluation.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="AccuEvaluWnd.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="SamplingFreeSurf.h" />
+    <CustomBuild Include="CoorTrans.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="FPathPlanAndExeDlg.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="EntityHighlight.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="FGuideDataType.h" />
+    <CustomBuild Include="FInsFeaTreeWnd.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="FInsFeatureDlg.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="FInsFeature.h" />
+    <CustomBuild Include="FInsReportDlg.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="FProbeComp.h" />
+    <ClInclude Include="FPathPlan.h" />
+    <ClInclude Include="FreadFile.h" />
+    <CustomBuild Include="FStatVisualWnd.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="FSubwindow.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="FTest.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="FTHP.h" />
+    <CustomBuild Include="FTreeWnd.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="FUtilities.h" />
+    <ClInclude Include="FXMLReader.h" />
+    <CustomBuild Include="MainDoc.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="InsReportFig.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="InsFeaUnitPainter_Rep.h" />
+    <ClInclude Include="MainView.h" />
+    <CustomBuild Include="FMainWindow.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ManualPointTool.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="CustomTitle.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="np.h" />
+    <ClInclude Include="occConverter.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </ClInclude>
+    <ClInclude Include="OrignManualTool.h" />
+    <ClInclude Include="PathPlan\Reader\io.h" />
+    <ClInclude Include="PathPlan\Reader\iotype.h" />
+    <ClInclude Include="PathPlan\TSPSOLVER\LKH\SRC\Delaunay.h" />
+    <ClInclude Include="PathPlan\TSPSOLVER\LKH\SRC\GainType.h" />
+    <ClInclude Include="PathPlan\TSPSOLVER\LKH\SRC\Genetic.h" />
+    <ClInclude Include="PathPlan\TSPSOLVER\LKH\SRC\GeoConversion.h" />
+    <ClInclude Include="PathPlan\TSPSOLVER\LKH\SRC\Hashing.h" />
+    <ClInclude Include="PathPlan\TSPSOLVER\LKH\SRC\Heap.h" />
+    <ClInclude Include="PathPlan\TSPSOLVER\LKH\SRC\LKH.h" />
+    <ClInclude Include="PathPlan\TSPSOLVER\LKH\SRC\LKHSolver.h" />
+    <ClInclude Include="PathPlan\TSPSOLVER\LKH\SRC\Segment.h" />
+    <ClInclude Include="PathPlan\TSPSOLVER\LKH\SRC\Sequence.h" />
+    <ClInclude Include="PathPlan\TSPSOLVER\LKH\SRC\unistd.h" />
+    <CustomBuild Include="qcustomplot.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="PointPlanDlg.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="ProbeVis.h" />
+    <ClInclude Include="InspVis_thread.h" />
+    <CustomBuild Include="TitleBar.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ProjectDir)moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_SQL_LIB -DQT_WEBKIT_LIB -DWNT -DLINKED -DNDEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS  "-I.\GeneratedFiles" "-I." "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebKit" "-I.\io\obj" "-I$(OpenCascadeInclude)\." "-I$(LibInclude)\." "-I$(OpcodeInclude)\." "-I$(OpenCSGInclude)\." "-I$(NurbsPPInclude)\." "-I$(QtInclude)\." "-I$(glInclude)\." "-I$(SolutionDir)\." </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename).h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="ToleranceFunction.h" />
+    <ClInclude Include="Tools\DataTransferTool.h" />
+    <ClInclude Include="Tools\FSelectTool.h" />
+    <ClInclude Include="TriTriIntersect.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+    <None Include="images\about.png" />
+    <CustomBuild Include="images\icons.qrc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath);.\images\surface\railsurextent1.png;.\images\surface\railsurextent2.png;.\images\surface\railsurextent3.png;.\images\surface\railsurextent4.png;.\images\surface\railsurextent5.png;.\images\surface\railsurextent6.png;.\images\surface\railsurextent7.png;.\images\surface\railsurextent8.png;.\i18n\jcp3_en.qm;.\i18n\jcp3_zh.qm;%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <None Include="MOC.txt" />
+    <None Include="PathPlan\TSPSOLVER\LKH\SRC\Makefile" />
+    <None Include="PathPlan\TSPSOLVER\LKH\SRC\参数说明.txt" />
+    <CustomBuild Include="UI\MainWindow.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <SubType>Designer</SubType>
+    </CustomBuild>
+    <None Include="UI\tcpfilesenderdialog.ui">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\myapp.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
